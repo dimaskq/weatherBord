@@ -1,4 +1,4 @@
-.leftBar__container{
+.leftBar__container {
     background-color: #8f8f8f4a;
     display: flex;
     flex-direction: column;
@@ -14,11 +14,11 @@
     flex-direction: column;
     gap: 10px;
 }
-.leftBar__wind_text{
+.leftBar__wind_text {
     color: #fff;
     font-size: 1rem;
 }
-  
+
 .leftBar__title {
     font-size: 1.5rem;
     text-align: center;
@@ -55,31 +55,27 @@
     height: 100%;
 }
 
-.leftBar__arena{
+.leftBar__arena {
     display: flex;
     flex-direction: column;
 }
 
-.leftBar__arena_title{
-    color: #ffffff;
+.leftBar__arena_title {
+    color: #c0c0c097;
     margin: 70px 0 0 0;
+    align-self: flex-start;
 }
 
-/* .leftBar__globus_img{
-    max-width: 100%;
-} */
 .leftBar__globe {
-    width: 300px; 
-    height: 300px; 
+    width: 300px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Щоб нічого не виходило за межі */
-  }
-  
-  
+    overflow: hidden;
+}
 
-.leftBar__arena_btn{
+.leftBar__arena_btn {
     width: 80%;
     padding: 15px 0;
     border-radius: 60px;
@@ -87,4 +83,83 @@
     color: #fff;
     cursor: pointer;
     align-self: center;
+}
+
+.arena__modal {
+    width: 100%;
+    height: 300px;
+    list-style: none;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.leftBar__arena .arena__modal.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    padding: 20px 0 0 0;
+}
+
+.arena__modal li {
+    color: #fff;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.arena__modal::-webkit-scrollbar {
+    width: 6px;
+}
+
+.arena__modal::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+}
+
+.arena__modal::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.arena__modal::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.leftBar__arena {
+    position: relative;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftBar__globe {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.leftBar__globe.hidden {
+    display: none;
+}
+
+.arena__modal {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.arena__modal.open {
+    display: flex;
 }

@@ -1,26 +1,25 @@
 export interface WeatherData {
-    name: string;
+    name: string
     main: {
-      temp: number;
-    };
+        temp: number
+    }
     weather: {
-      description: string;
-    }[];
+        description: string
+    }[]
     wind: {
-      speed: number;
-    };
+        speed: number
+        deg: number
+    }
 }
-  
-  
+
 export interface ForecastData {
     list: {
-      dt: number;
-      main: {
-        temp: number;
-      };
-      weather: {
-        description: string;
-      }[];
-    }[];
+        dt: number
+        main: {
+            temp: number
+        }
+        weather: {
+            description: string
+        }[]
+    }[]
 }
-  
